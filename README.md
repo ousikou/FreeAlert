@@ -25,3 +25,21 @@ FreeAlert.shared.show(in: self,
             print("Cancel Button Tapped.")
         }),tapDismissEnable: true)
 ```
+
+## CocoaPod
+
+```ruby
+# Podfile
+use_frameworks!
+
+target 'YOUR_TARGET_NAME' do
+    pod 'FreeAlert'
+end
+
+```
+
+Replace `YOUR_TARGET_NAME` and then, in the `Podfile` directory, type:
+
+```bash
+$ pod install
+```
