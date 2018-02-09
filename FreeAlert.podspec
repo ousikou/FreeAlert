@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.author	= { 'Ousikou' => 'wangziheng@fenrir-tec.com' } 
   s.platform	= :ios, '9.0' 
   s.source	= { :git => 'https://github.com/ousikou/FreeAlert.git', :tag => s.version } 
-  s.source_files = 'FreeAlert/**' 
+  s.source_files = 'FreeAlert/**/*.{swift,xib}' 
   s.frameworks = 'UIKit' 
   s.requires_arc = true
 
