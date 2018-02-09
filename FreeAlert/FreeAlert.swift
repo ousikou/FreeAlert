@@ -8,13 +8,13 @@
 
 import UIKit
 
-typealias ClickBlock = () -> Void
-typealias ButtonInfo = (String, ClickBlock)
+public typealias ClickBlock = () -> Void
+public typealias ButtonInfo = (String, ClickBlock)
 
 fileprivate var maxAlertWidth = CGFloat(270)
 fileprivate var maxAlertHeight = CGFloat(300)
 
-protocol FreeAlertProtocal {
+public protocol FreeAlertProtocal {
     
     func show(in vc: UIViewController,
         alertTitle: String,
@@ -28,18 +28,17 @@ protocol FreeAlertProtocal {
     func hide()
 }
 
-class FreeAlert: UIViewController, FreeAlertProtocal {
+public class FreeAlert: UIViewController, FreeAlertProtocal {
     
-    static let shared = FreeAlert()
+    public static let shared = FreeAlert()
     
-    public init() {
+    private init() {
         super.init(nibName: "FreeAlert", bundle: nil)
         loadXib()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(nibName: "FreeAlert", bundle: nil)
-        loadXib()
     }
     
     func loadXib() {
@@ -68,7 +67,7 @@ class FreeAlert: UIViewController, FreeAlertProtocal {
     private var singleOkInfo: ButtonInfo?
     private var additionView: UIView?
     
-    func show(in vc: UIViewController,
+    public func show(in vc: UIViewController,
                     alertTitle: String,
                     alertMessage: String,
                     additionView: UIView?,
@@ -126,7 +125,7 @@ class FreeAlert: UIViewController, FreeAlertProtocal {
         }
     }
     
-    func hide() {
+    public func hide() {
         dismissAlert()
     }
    
@@ -158,7 +157,7 @@ class FreeAlert: UIViewController, FreeAlertProtocal {
         dismissAlert()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override public func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         self.container.alpha = 1.0
         self.maskView.alpha = 0.0
@@ -188,39 +187,39 @@ class FreeAlert: UIViewController, FreeAlertProtocal {
 // Appearance
 extension FreeAlert {
     
-    static func appearance() -> FreeAlert {
+    public static func appearance() -> FreeAlert {
         return FreeAlert.shared
     }
     
     
-    func setCornerRadius(radius: CGFloat) {
+    public func setCornerRadius(radius: CGFloat) {
         self.container.layer.cornerRadius = radius
     }
     
-    func setTitleTextColor(color: UIColor) {
+    public func setTitleTextColor(color: UIColor) {
         self.titleLabel.textColor = color
     }
     
-    func setTitleFont(font: UIFont) {
+    public func setTitleFont(font: UIFont) {
         self.titleLabel.font = font
     }
     
-    func setMessageTitleColor(color: UIColor) {
+    public func setMessageTitleColor(color: UIColor) {
         self.messageLabel.textColor = color
     }
     
-    func setMessageFont(font: UIFont) {
+    public func setMessageFont(font: UIFont) {
         self.messageLabel.font = font
     }
     
     /// cannot bigger than screen width
-    func setPreferredWidth(width: CGFloat) {
+    public func setPreferredWidth(width: CGFloat) {
         let maxW = min(UIScreen.main.bounds.width, width)
         self.containerWidth.constant = maxW
         maxAlertWidth =  maxW
     }
     
-    override func didReceiveMemoryWarning() {
+    override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
