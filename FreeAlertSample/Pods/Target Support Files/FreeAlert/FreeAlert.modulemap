@@ -1,0 +1,6 @@
+framework module FreeAlert {
+  umbrella header "FreeAlert-umbrella.h"
+
+  export *
+  module * { export * }
+}
