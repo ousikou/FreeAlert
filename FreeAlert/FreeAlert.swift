@@ -1,5 +1,5 @@
 //
-//  EasyAlert.swift
+//  FreeAlert.swift
 //  CustomizeAlert
 //
 //  Created by wangzh on 2018/02/07.
@@ -14,7 +14,7 @@ typealias ButtonInfo = (String, ClickBlock)
 fileprivate var maxAlertWidth = CGFloat(270)
 fileprivate var maxAlertHeight = CGFloat(300)
 
-protocol EasyAlertProtocal {
+protocol FreeAlertProtocal {
     
     func show(in vc: UIViewController,
         alertTitle: String,
@@ -28,17 +28,17 @@ protocol EasyAlertProtocal {
     func hide()
 }
 
-class EasyAlert: UIViewController, EasyAlertProtocal {
+class FreeAlert: UIViewController, FreeAlertProtocal {
     
-    static let shared = EasyAlert()
+    static let shared = FreeAlert()
     
     public init() {
-        super.init(nibName: "EasyAlert", bundle: nil)
+        super.init(nibName: "FreeAlert", bundle: nil)
         loadXib()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(nibName: "EasyAlert", bundle: nil)
+        super.init(nibName: "FreeAlert", bundle: nil)
         loadXib()
     }
     
@@ -186,10 +186,10 @@ class EasyAlert: UIViewController, EasyAlertProtocal {
 }
 
 // Appearance
-extension EasyAlert {
+extension FreeAlert {
     
-    static func appearance() -> EasyAlert {
-        return EasyAlert.shared
+    static func appearance() -> FreeAlert {
+        return FreeAlert.shared
     }
     
     
