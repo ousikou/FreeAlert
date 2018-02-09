@@ -33,7 +33,8 @@ public class FreeAlert: UIViewController, FreeAlertProtocal {
     public static let shared = FreeAlert()
     
     private init() {
-        super.init(nibName: "FreeAlert", bundle: nil)
+        let bundle = Bundle(for: FreeAlert.classForCoder())
+        super.init(nibName: "FreeAlert", bundle: bundle)
         loadXib()
     }
     
