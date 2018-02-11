@@ -12,5 +12,6 @@ Pod::Spec.new do |s|
   s.source_files = 'FreeAlert/**/*.{swift,xib}' 
   s.frameworks = 'UIKit' 
   s.requires_arc = true
+  s.denpendency 'CocoaLumberjack/Swift'
 
 end 
