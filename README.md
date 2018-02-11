@@ -15,15 +15,15 @@ imgView.contentMode = .scaleAspectFit
 imgView.image = UIImage.init(named: "test")
 
 // Show Alert
-        FreeAlert.shared.show(in: self,
-                              alertTitle: "Image Alert",
-                              alertMessage: "I'm a alert with UIImageView",
-                              additionView: imgView,
-                              okInfo: ("Ok", {
-                                    print("Ok Button Tapped.")
-                                }), cancelInfo: ("Cancel", {
-                                    print("Cancel Button Tapped.")
-                                }),tapDismissEnable: true)
+FreeAlert.shared.show(in: self,
+                      alertTitle: "Image Alert",
+                      alertMessage: "I'm a alert with UIImageView",
+                      additionView: imgView,
+                      okInfo: ("Ok", {
+                            print("Ok Button Tapped.")
+                        }), cancelInfo: ("Cancel", {
+                            print("Cancel Button Tapped.")
+                        }),tapDismissEnable: true)
 ```
 
 ## CocoaPod
