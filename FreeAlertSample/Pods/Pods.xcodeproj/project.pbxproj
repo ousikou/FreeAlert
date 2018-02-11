@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -33,24 +33,24 @@
 		1E38560DD2BC56A1B276A718F0B9AE38 /* FreeAlert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FreeAlert.swift; path = FreeAlert/FreeAlert.swift; sourceTree = "<group>"; };
 		3E62D9280EDFE5EA4FCC4176BE3BAA5E /* Pods-FreeAlertSample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FreeAlertSample-resources.sh"; sourceTree = "<group>"; };
 		4D9F425018EDE8089A2039BF46677F4B /* Pods-FreeAlertSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FreeAlertSample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5546CD2613B25FA975B5D5B8D012CCC1 /* Pods-FreeAlertSample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FreeAlertSample.modulemap"; sourceTree = "<group>"; };
+		5546CD2613B25FA975B5D5B8D012CCC1 /* Pods-FreeAlertSample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FreeAlertSample.modulemap"; sourceTree = "<group>"; };
 		610F0ED8740A4A4930CBC25DE6840CF5 /* Pods-FreeAlertSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FreeAlertSample.release.xcconfig"; sourceTree = "<group>"; };
 		748495F278F388D925F826BD1186D261 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77625FFB4BF1764A65F08579382120C7 /* FreeAlert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FreeAlert-umbrella.h"; sourceTree = "<group>"; };
 		8BDF07CD0C6931CEB559F8DB657612C8 /* FreeAlert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FreeAlert-dummy.m"; sourceTree = "<group>"; };
 		91EC02829515DF40D757C9736112F56F /* Pods-FreeAlertSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FreeAlertSample-frameworks.sh"; sourceTree = "<group>"; };
 		925F1CC36C891A5195B1A1924FB00568 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; };
 		945820C19D8DDEE21D05F5F28EFB42DD /* FreeAlert.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FreeAlert.xcconfig; sourceTree = "<group>"; };
-		9F93E3A1A4709918BAF67699D1F111AB /* Pods_FreeAlertSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FreeAlertSample.framework; path = "Pods-FreeAlertSample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F93E3A1A4709918BAF67699D1F111AB /* Pods_FreeAlertSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeAlertSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A323066157BD46D06234712E5E2146B2 /* FreeAlert-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FreeAlert-prefix.pch"; sourceTree = "<group>"; };
 		B266CEC4FD6868BD18587C93055310F5 /* Pods-FreeAlertSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FreeAlertSample-dummy.m"; sourceTree = "<group>"; };
 		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		BB0A3AE14E6DD523EDEFF834190C804B /* FreeAlert.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FreeAlert.xib; path = FreeAlert/FreeAlert.xib; sourceTree = "<group>"; };
-		C5410EAE75A1B54AC8EC9C2AF5EBDF23 /* FreeAlert.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FreeAlert.modulemap; sourceTree = "<group>"; };
+		C5410EAE75A1B54AC8EC9C2AF5EBDF23 /* FreeAlert.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FreeAlert.modulemap; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E64DB788A9050C685DDC637DAFF440C7 /* Pods-FreeAlertSample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FreeAlertSample-umbrella.h"; sourceTree = "<group>"; };
-		F2CE6FB9E68F21B54B2E21AD388663D2 /* FreeAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FreeAlert.framework; path = FreeAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2CE6FB9E68F21B54B2E21AD388663D2 /* FreeAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FreeAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC52A429E9F07E0F02CD0B6772B9AA30 /* Pods-FreeAlertSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FreeAlertSample-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,7 +167,6 @@
 				BB0A3AE14E6DD523EDEFF834190C804B /* FreeAlert.xib */,
 				B20BF1EFDB2918870CC954F1402FA1FB /* Support Files */,
 			);
-			name = FreeAlert;
 			path = FreeAlert;
 			sourceTree = "<group>";
 		};

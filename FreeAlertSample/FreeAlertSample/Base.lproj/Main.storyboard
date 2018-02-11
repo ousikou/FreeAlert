@@ -19,17 +19,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBZ-95-wry">
-                                <rect key="frame" x="164" y="328.5" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="0.0" y="622" width="125" height="30"/>
+                                <state key="normal" title="ImageAlert"/>
                                 <connections>
                                     <action selector="showImageAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ab6-iY-oF7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iL6-Qx-Kdi">
+                                <rect key="frame" x="125" y="622" width="125" height="30"/>
+                                <state key="normal" title="TableViewAlert"/>
+                                <connections>
+                                    <action selector="showTableVIewAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BGd-4j-aQA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nO3-DH-bxt">
+                                <rect key="frame" x="250" y="622" width="125" height="30"/>
+                                <state key="normal" title="NormalAlert"/>
+                                <connections>
+                                    <action selector="showNormalAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fdw-uf-TEm"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="sBZ-95-wry" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="h3p-jL-OMd"/>
-                            <constraint firstItem="sBZ-95-wry" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="rby-LN-fao"/>
+                            <constraint firstItem="nO3-DH-bxt" firstAttribute="width" secondItem="sBZ-95-wry" secondAttribute="width" id="99J-zs-9WN"/>
+                            <constraint firstItem="iL6-Qx-Kdi" firstAttribute="centerY" secondItem="sBZ-95-wry" secondAttribute="centerY" id="EJ0-4C-N4a"/>
+                            <constraint firstItem="nO3-DH-bxt" firstAttribute="centerY" secondItem="sBZ-95-wry" secondAttribute="centerY" id="LFD-nA-HoB"/>
+                            <constraint firstItem="iL6-Qx-Kdi" firstAttribute="leading" secondItem="sBZ-95-wry" secondAttribute="trailing" id="XC0-OG-krh"/>
+                            <constraint firstItem="iL6-Qx-Kdi" firstAttribute="width" secondItem="sBZ-95-wry" secondAttribute="width" id="Xuo-Xj-tkU"/>
+                            <constraint firstItem="sBZ-95-wry" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Z7Q-x7-igZ"/>
+                            <constraint firstItem="nO3-DH-bxt" firstAttribute="leading" secondItem="iL6-Qx-Kdi" secondAttribute="trailing" id="aA1-o8-LDc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nO3-DH-bxt" secondAttribute="trailing" id="g4v-Kl-vN1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sBZ-95-wry" secondAttribute="bottom" constant="15" id="yZL-nx-Ibp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

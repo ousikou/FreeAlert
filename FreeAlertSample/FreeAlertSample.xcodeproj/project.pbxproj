@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7E84337A93EDBDEAA922F708 /* Pods_FreeAlertSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9954DCBC56736635FE9ADE5E /* Pods_FreeAlertSample.framework */; };
+		BE554D26202FDB07007868C8 /* SampleTableVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE554D24202FDB07007868C8 /* SampleTableVIewController.swift */; };
+		BE554D27202FDB07007868C8 /* SampleTableVIewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE554D25202FDB07007868C8 /* SampleTableVIewController.xib */; };
 		BEE1CC9F202D8C30008328D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE1CC9E202D8C30008328D9 /* AppDelegate.swift */; };
 		BEE1CCA1202D8C30008328D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE1CCA0202D8C30008328D9 /* ViewController.swift */; };
 		BEE1CCA4202D8C30008328D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEE1CCA2202D8C30008328D9 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		9954DCBC56736635FE9ADE5E /* Pods_FreeAlertSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeAlertSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE554D24202FDB07007868C8 /* SampleTableVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableVIewController.swift; sourceTree = "<group>"; };
+		BE554D25202FDB07007868C8 /* SampleTableVIewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleTableVIewController.xib; sourceTree = "<group>"; };
 		BEE1CC9B202D8C30008328D9 /* FreeAlertSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeAlertSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE1CC9E202D8C30008328D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEE1CCA0202D8C30008328D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				BEE1CCA7202D8C30008328D9 /* LaunchScreen.storyboard */,
 				BEE1CCAA202D8C30008328D9 /* Info.plist */,
 				BEE1CCCC202D8CB0008328D9 /* Podfile */,
+				BE554D24202FDB07007868C8 /* SampleTableVIewController.swift */,
+				BE554D25202FDB07007868C8 /* SampleTableVIewController.xib */,
 			);
 			path = FreeAlertSample;
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 				BEE1CCA9202D8C30008328D9 /* LaunchScreen.storyboard in Resources */,
 				BEE1CCA6202D8C30008328D9 /* Assets.xcassets in Resources */,
 				BEE1CCCD202D8CB0008328D9 /* Podfile in Resources */,
+				BE554D27202FDB07007868C8 /* SampleTableVIewController.xib in Resources */,
 				BEE1CCA4202D8C30008328D9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEE1CCA1202D8C30008328D9 /* ViewController.swift in Sources */,
+				BE554D26202FDB07007868C8 /* SampleTableVIewController.swift in Sources */,
 				BEE1CC9F202D8C30008328D9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
