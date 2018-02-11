@@ -10,7 +10,7 @@ import UIKit
 import FreeAlert
 
 class ViewController: UIViewController {
-    let tbVC = SampleTableVIewController(nibName: "SampleTableVIewController", bundle: nil)
+    var tbVC: SampleTableVIewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,7 @@ class ViewController: UIViewController {
     
     @IBAction func showTableVIewAlert(_ sender: Any) {
         
+        tbVC = SampleTableVIewController(nibName: "SampleTableVIewController", bundle: nil)
         tbVC.view.frame = CGRect(x: 0, y: 0, width: 300, height: 120)
         
         // Show Alert
