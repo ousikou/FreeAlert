@@ -46,7 +46,7 @@ public class FreeAlert: UIViewController, FreeAlertProtocal {
         let _ = view
         modalPresentationStyle = .custom
         self.setCornerRadius(radius: 10.0)
-        resetButtonTitle()
+        resetViews()
     }
     
     @IBOutlet var containerWidth: NSLayoutConstraint!
@@ -107,19 +107,19 @@ public class FreeAlert: UIViewController, FreeAlertProtocal {
             }
             
             if let v = additionView {
-                for v in strongSelf.additionViewContainer.subviews {
-                    v.removeFromSuperview()
-                }
                 
                 let addtionHeight = min(v.frame.size.height, maxAlertHeight)
                 let addtionWidth = min(v.frame.size.width, maxAlertWidth)
                 let x = (maxAlertWidth - addtionWidth) / 2
                 v.frame = CGRect(x: x, y: 0, width: addtionWidth, height: addtionHeight)
                 
-                strongSelf.additionViewContainer.addSubview(v)
                 strongSelf.additionViewHeight.constant = addtionHeight;
+                self?.view.layoutIfNeeded()
+                
+                strongSelf.additionViewContainer.addSubview(v)
             } else {
                 strongSelf.additionViewHeight.constant = 0;
+                self?.view.layoutIfNeeded()
             }
             
             vc.present(strongSelf, animated: false, completion: nil)
@@ -174,14 +174,18 @@ public class FreeAlert: UIViewController, FreeAlertProtocal {
         }) { (finished) in
             self.dismiss(animated: false, completion: nil)
             block()
-            self.resetButtonTitle()
+            self.resetViews()
         }
     }
     
-    private func resetButtonTitle() {
+    private func resetViews() {
         self.doubleOkButton.setTitle("", for: .normal)
         self.doubleCancelButton.setTitle("", for: .normal)
         self.singleOkButton.setTitle("", for: .normal)
+        
+        for v in self.additionViewContainer.subviews {
+            v.removeFromSuperview()
+        }
     }
 }
 
