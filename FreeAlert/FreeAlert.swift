@@ -14,9 +14,19 @@ public typealias ButtonInfo = (String, ClickBlock)
 fileprivate var maxAlertWidth = CGFloat(270)
 fileprivate var maxAlertHeight = CGFloat(300)
 
+let errorPrefix = "FreeAlert Error:"
+
 public protocol FreeAlertProtocal {
     
-    func show(in vc: UIViewController,
+    /// - Parameters:
+    ///   - vc: If you have the given controller that you want present alert from, otherwise alert will present from the top controller of current application
+    ///   - alertTitle: Title of your alert
+    ///   - alertMessage: Message of you alert
+    ///   - additionView: Your customize view that will show between message area and button area, if nil just show as system alert
+    ///   - okInfo: The button title and action for your first button(buttonTitle: String, buttonAction: ClickBlock)
+    ///   - cancelInfo: The button title and action for your second button(buttonTitle: String, buttonAction: ClickBlock)
+    ///   - tapDismissEnable: If true, alert will dismiss when you tap the shadow area around alert
+    func show(in vc: UIViewController?,
         alertTitle: String,
         alertMessage: String,
         additionView: UIView?,
@@ -46,6 +56,7 @@ public class FreeAlert: UIViewController, FreeAlertProtocal {
         let _ = view
         modalPresentationStyle = .custom
         self.setCornerRadius(radius: 10.0)
+        self.maskView.alpha = 0.15
         resetViews()
     }
     
@@ -68,7 +79,7 @@ public class FreeAlert: UIViewController, FreeAlertProtocal {
     private var singleOkInfo: ButtonInfo?
     private var additionView: UIView?
     
-    public func show(in vc: UIViewController,
+    public func show(in vc: UIViewController? = nil,
                     alertTitle: String,
                     alertMessage: String,
                     additionView: UIView?,
@@ -122,7 +133,16 @@ public class FreeAlert: UIViewController, FreeAlertProtocal {
                 self?.view.layoutIfNeeded()
             }
             
-            vc.present(strongSelf, animated: false, completion: nil)
+            if let givenVC = vc {
+                if givenVC is FreeAlert {
+                    // TODO:
+                    debugPrint("\(errorPrefix) cannot present alert more than one")
+                    return
+                }
+                givenVC.present(strongSelf, animated: false, completion: nil)
+            } else {
+                self?.topViewController?.present(strongSelf, animated: false, completion: nil)
+            }
         }
     }
     
@@ -187,6 +207,54 @@ public class FreeAlert: UIViewController, FreeAlertProtocal {
             v.removeFromSuperview()
         }
     }
+    
+    // Get the top viewcontroller in current application
+    var topViewController: UIViewController? {
+        get {
+            if let rootVC = UIApplication.shared.keyWindow?.rootViewController {
+                var resultVC = getTopVC(from: rootVC)
+                while true  {
+                    if let presented = resultVC?.presentedViewController {
+                        resultVC = presented
+                    } else {
+                        break
+                    }
+                }
+                return resultVC
+            }
+            return nil
+        }
+    }
+    
+    func getTopVC(from controller: UIViewController) -> UIViewController? {
+        if controller is FreeAlert {
+            // TODO:
+            debugPrint("\(errorPrefix) cannot present alert more than one")
+            return nil
+        }
+        
+        if controller is UINavigationController {
+            let nv = controller as! UINavigationController
+            if let topOfNav = nv.topViewController {
+                // TODO:
+                debugPrint("\(errorPrefix) Current Navigation With out rootcontrollers")
+                return topOfNav
+            }
+            return nil
+        }
+        
+        if controller is UITabBarController {
+            let tv = controller as! UITabBarController
+            if let selectedVC = tv.selectedViewController {
+                // TODO:
+                debugPrint("\(errorPrefix) Current UITabBarController With out rootcontrollers")
+                return selectedVC
+            }
+            return nil
+        }
+        
+        return controller
+    }
 }
 
 // Appearance
@@ -229,26 +297,4 @@ extension FreeAlert {
         // Dispose of any resources that can be recreated.
     }
     
-    /**
-    func showSystemAlert(in viewcontroller: UIViewController) {
-        let alert: UIAlertController = UIAlertController(title: "アラート表示", message: "保存してもいいですか？", preferredStyle:  UIAlertControllerStyle.alert)
-        
-        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
-            (action: UIAlertAction!) -> Void in
-            print("OK")
-        })
-        
-        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel, handler:{
-            (action: UIAlertAction!) -> Void in
-            print("Cancel")
-        })
-        
-        alert.addAction(cancelAction)
-        alert.addAction(defaultAction)
-        
-        viewcontroller.present(alert, animated: true) {
-            print("\(alert)")
-        }
-    }
- **/
 }
