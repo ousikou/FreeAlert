@@ -10,9 +10,9 @@
 ## Usage
 
 <table>
-  <tr>
-    <td> </td>
-  </tr>
+   <th width="30%" rowspan="9"><img src="https://github.com/ousikou/FreeAlert/blob/master/Gif/normalAlert.gif"></th>
+   <th width="30%" rowspan="9"><img src="https://github.com/ousikou/FreeAlert/blob/master/Gif/uiimageAlert.gif"></th>
+   <th width="30%" rowspan="9"><img src="https://github.com/ousikou/FreeAlert/blob/master/Gif/tableviewAlert.gif"></th>
 </table>
 
 ```swift
