@@ -79,6 +79,8 @@ public class FreeAlert: UIViewController, FreeAlertProtocal {
     private var singleOkInfo: ButtonInfo?
     private var additionView: UIView?
     
+    private var freeAlertIsPresented = false
+    
     public func show(in vc: UIViewController? = nil,
                     alertTitle: String,
                     alertMessage: String,
@@ -87,6 +89,12 @@ public class FreeAlert: UIViewController, FreeAlertProtocal {
                     cancelInfo: ButtonInfo?,
                     tapDismissEnable: Bool = false
         ) {
+        if freeAlertIsPresented {
+            debugPrint("\(errorPrefix) alert is presenting on screen")
+            return
+        }
+        
+        self.freeAlertIsPresented = true
         DispatchQueue.main.async {[weak self] in
             guard let strongSelf = self else {
                 return
@@ -134,11 +142,6 @@ public class FreeAlert: UIViewController, FreeAlertProtocal {
             }
             
             if let givenVC = vc {
-                if givenVC is FreeAlert {
-                    // TODO:
-                    debugPrint("\(errorPrefix) cannot present alert more than one")
-                    return
-                }
                 givenVC.present(strongSelf, animated: false, completion: nil)
             } else {
                 self?.topViewController?.present(strongSelf, animated: false, completion: nil)
@@ -176,6 +179,11 @@ public class FreeAlert: UIViewController, FreeAlertProtocal {
     
     @IBAction func backgroundTapAction(_ sender: Any) {
         dismissAlert()
+    }
+    
+    override public func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        freeAlertIsPresented = false
     }
     
     override public func viewDidAppear(_ animated: Bool) {
